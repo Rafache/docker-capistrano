@@ -1,13 +1,15 @@
-## Capistrano
+# Ruby tools with Docker
 
-Docker image to run capistrano.
+Docker image to run :
+- rake
+- capistrano
 
-### Usage
+## Usage
 
 ```bash
-docker run --rm -v ~/.ssh:/root/.ssh:ro -v /path/to/project/:/data rafache/capistrano cap --version
+docker run --rm -v /path/to/project/:/data rafache/ruby-tools cap
 ```
 
-### License
+## License
 
 MIT: http://mit-license.org
