@@ -1,5 +1,5 @@
 build:
-	docker build -t rafache/node-ruby .
+	docker build -t rafache/ruby-cli .
 
 check:
-	docker run --rm rafache/node-ruby ruby -v
+	docker run --rm rafache/ruby-cli ruby -v

@@ -18,6 +18,6 @@ make check
 ## Run
 
 ```bash
-docker run --rm -v /path/to/project/:/data -v ~/.ssh:/root/.ssh:ro rafache/ruby-tools ruby -v
-docker run --rm -v /path/to/project/:/data -v ~/.ssh:/root/.ssh:ro rafache/ruby-tools cap
+docker run --rm -v /path/to/project/:/data -v ~/.ssh:/root/.ssh:ro rafache/ruby-cli ruby -v
+docker run --rm -v /path/to/project/:/data -v ~/.ssh:/root/.ssh:ro rafache/ruby-cli cap
 ```
