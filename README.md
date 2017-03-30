@@ -4,12 +4,20 @@ Docker image to run :
 - rake
 - capistrano
 
-## Usage
+## Build
 
 ```bash
-docker run --rm -v /path/to/project/:/data rafache/ruby-tools cap
+make
 ```
 
-## License
+## Check (display version)
+```bash
+make check
+```
 
-MIT: http://mit-license.org
+## Run
+
+```bash
+docker run --rm -v /path/to/project/:/data -v ~/.ssh:/root/.ssh:ro rafache/ruby-tools ruby -v
+docker run --rm -v /path/to/project/:/data -v ~/.ssh:/root/.ssh:ro rafache/ruby-tools cap
+```
