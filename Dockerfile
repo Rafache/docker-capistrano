@@ -2,8 +2,11 @@ FROM ruby:alpine
 
 MAINTAINER Rafache
 
-RUN apk update && apk upgrade && apk add --no-cache git make
+RUN apk update && apk upgrade && apk add --no-cache git make bash
 
-RUN gem install rake capistrano highline airbrussh octokit dotenv
+#CAPISTRANO
+RUN gem install rake capistrano highline airbrussh dotenv
+
+RUN gem install sass
 
 WORKDIR /data
