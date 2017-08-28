@@ -9,7 +9,6 @@ RUN gem install --quiet \
     capistrano \
     highline \
     airbrussh \
-    dotenv \
-    sass
+    dotenv
 
 WORKDIR /data
