@@ -4,20 +4,10 @@ Docker image to run :
 - rake
 - capistrano
 
-## Build
-
-```bash
-make
-```
-
-## Check (display version)
-```bash
-make check
-```
 
 ## Run
 
 ```bash
-docker run --rm -v /path/to/project/:/data -v ~/.ssh:/root/.ssh:ro rafache/ruby-cli ruby -v
-docker run --rm -v /path/to/project/:/data -v ~/.ssh:/root/.ssh:ro rafache/ruby-cli cap
+alias ruby='docker run -it --rm -v "$PWD":"$PWD" -w "$PWD" -v ~/.ssh:/root/.ssh:ro registry.gitlab.com/rafache/docker/ruby-cli:master ruby'
+alias cap='docker run -it --rm -v "$PWD":"$PWD" -w "$PWD" -v ~/.ssh:/root/.ssh:ro registry.gitlab.com/rafache/docker/ruby-cli:master cap'
 ```
